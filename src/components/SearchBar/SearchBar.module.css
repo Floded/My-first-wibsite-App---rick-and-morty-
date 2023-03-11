@@ -1,0 +1,33 @@
+.SearchBar {
+    width: 90%;
+    height: 50px;
+    margin: 25px 10px 500px 50px;
+    background: rgba(0, 255, 34, 0.397);
+    border-radius: 10px;
+    position: absolute;
+    
+}
+
+.Imput  {
+    align-items: center;
+}
+
+.ButtomAdd {
+    border-radius: 10px;
+}
+
+.ContainImput {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+    margin-right: 30px;
+}
+
+button {
+    margin-left: 10px;
+}
+
+button:hover{
+    cursor: pointer;
+    box-shadow: 4px 2px 9px 1px rgba(65,186,242,0.66);
+}

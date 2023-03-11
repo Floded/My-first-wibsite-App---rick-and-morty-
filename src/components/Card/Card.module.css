@@ -1,0 +1,54 @@
+.Card{
+    display: flex;    
+    justify-content: center;
+    width: 500px;
+    height: 290px;
+    background: aliceblue;
+    margin: 100px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.Card:hover {
+    transform: scale(1.1);
+}
+
+
+.Img {
+    width: 90%;
+    height: 90%;
+    margin-top: 12px;
+    margin-left: 12px;
+    border: solid black 2px;
+    border-radius: 20px
+}
+
+.TextContainer {
+    width: 20%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding-left: 60px;
+}
+
+.Buttom {
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    margin-top: 12px;
+    margin-left: 25px;
+    background: red;
+    color: antiquewhite;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.Buttom:hover {
+    cursor: pointer;
+}
+
+h3 {
+    margin-left: 10px;
+    color: red;
+}
+
