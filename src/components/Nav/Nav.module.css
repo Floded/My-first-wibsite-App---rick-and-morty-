@@ -1,0 +1,23 @@
+.container {
+    /* display: grid;
+    grid-template-columns: 20% 20% 60%; */
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(40, 133, 82);
+    padding: 15px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .active{
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+  }
+  
+  .disable {
+    text-decoration: none;
+    color: aliceblue;
+  }
+  

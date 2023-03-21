@@ -3,7 +3,7 @@
     justify-content: center;
     width: 500px;
     height: 290px;
-    background: aliceblue;
+    background: rgb(89, 156, 214);
     margin: 100px;
     border-radius: 30px;
     transition: all 0.3s ease;
@@ -25,9 +25,14 @@
 
 .TextContainer {
     width: 20%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: cursive;
     font-size: 14px;
     padding-left: 60px;
+}
+
+h2{
+    text-decoration: underline;
+    
 }
 
 .Buttom {
@@ -48,7 +53,9 @@
 }
 
 h3 {
+    text-align: left;
     margin-left: 10px;
-    color: red;
+    color: rgb(8, 63, 56);
+    width: 150px;
 }
 
