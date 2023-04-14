@@ -17,7 +17,7 @@ function App() {
   const password = ""
 
   function onSearch(id) {
-    axios.get(`https://rickandmortyapi.com/api/character/${id}`).then((res) => {
+    axios.get(`http://localhost:3001/rickandmorty/character/${id}`).then((res) => {
       const data = res.data;
       (
         data.name
