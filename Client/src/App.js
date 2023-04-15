@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import "./App.css";
 import Cards from "./components/Cards/Cards";
+import Favorites from "./components/Favorites/Favorites";
 import Form from "./components/Form/Form";
 import Nav from "./components/Nav/Nav";
 import About from "./components/About/About";
@@ -57,6 +58,7 @@ function App() {
         />
         <Route path="/about" element={<About />} />
         <Route path="/detail/:detailId" element={<Detail />} />
+        <Route path="/favorites" element={<Favorites />} />
       </Routes>
       {/* <SearchBar onSearch={onSearch}/> */}
     </div>

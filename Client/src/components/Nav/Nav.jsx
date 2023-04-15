@@ -20,6 +20,7 @@ export default function Nav(props) {
     <div className={styles.container}>
       <NavLinkMe to="/home">Home</NavLinkMe>
       <NavLinkMe to="/about">About</NavLinkMe>
+      <NavLink to="/favorites">Favorites</NavLink>
       <SearchBar onSearch={(charaterID) => props.onSearch(charaterID)} />
     </div>
   );
