@@ -7,42 +7,50 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
+    // case ADD_FAV:
+    //   return {
+    //     ...state,
+    //     allCharacters: [...state.allCharacters, action.payload],
+    //     myFavorites: [...state.allCharacters, action.payload],
+    //   };
+
     case ADD_FAV:
-      return {
-        ...state,
-        allCharacters: [...state.allCharacters, action.payload],
-        myFavorites: [...state.allCharacters, action.payload],
-      };
+      return { 
+        ...state, 
+        myFavorites: action.payload, allCharacters: action.payload };
+    // case DELETE_FAV:
+    //   const filtered = state.myFavorites.filter(
+    //     (charater) => charater.id !== action.payload
+    //   );
+    //   return {
+    //     ...state,
+    //     myFavorites: filtered,
+    //   };
+
     case DELETE_FAV:
-      const filtered = state.myFavorites.filter(
-        (charater) => charater.id !== action.payload
-      );
-      return {
-        ...state,
-        myFavorites: filtered,
-      };
+      return { ...state, myFavorites: action.payload };
     case FILTER:
       const filtrado = [...state.allCharacters].filter(
-        (character) => character.gender == action.payload
+        (character) => character.gender === action.payload
       );
       return {
         ...state,
         myFavorites: filtrado,
       };
     case ORDER:
-      const ordered = [...state.allCharacters].sort((a,b)=> {
-        if(a.id > b.id){
+      const ordered = [...state.allCharacters].sort((a, b) => {
+        if (a.id > b.id) {
           return action.payload === "Ascendente" ? 1 : -1;
-        } else if(a.id < b.id){
-            return action.payload === "Descendente" ? 1 : -1;
-          } else {
-            return 0
-          }
-        });
-        return {
-          ...state,
-          myFavorites: ordered
+        } else if (a.id < b.id) {
+          return action.payload === "Descendente" ? 1 : -1;
+        } else {
+          return 0;
         }
+      });
+      return {
+        ...state,
+        myFavorites: ordered,
+      };
     default:
       return { ...state };
   }

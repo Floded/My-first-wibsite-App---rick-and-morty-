@@ -35,13 +35,24 @@ function App() {
     setCharacter(filt);
   }
 
-  const login = (userData) => {
-    if(userData.userName === userName &&
-      userData.password === password) {
-        setAccess(true);  
-        navigate("/home");
-      }
-  };
+  // const login = (userData) => {
+  //   if(userData.userName === userName &&
+  //     userData.password === password) {
+  //       setAccess(true);  
+  //       navigate("/home");
+  //     }
+  // };
+
+  function login(userData) {
+    const { userName, password } = userData;
+    const URL = 'http://localhost:3001/rickandmorty/login/';
+    axios(URL + `?email=${userName}&password=${password}`).then(({ data }) => {
+       const { access } = data;
+       setAccess(data);
+       access && navigate('/home');
+    });
+    // console.log(userName, password);
+ }
 
   useEffect(() => {
     !access && navigate("/");
