@@ -14,8 +14,8 @@ function App() {
   const navigate = useNavigate();
   const [character, setCharacter] = useState([]);
   const [access, setAccess] = useState(false);
-  const userName = "";
-  const password = ""
+  // const userName = "";
+  // const password = ""
 
   function onSearch(id) {
     axios.get(`http://localhost:3001/rickandmorty/character/${id}`).then((res) => {

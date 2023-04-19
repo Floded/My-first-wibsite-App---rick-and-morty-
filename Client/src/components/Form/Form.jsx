@@ -58,28 +58,34 @@ export default function Form(props) {
 
   return (
     <form onSubmit={handleSubmit} className={styles.Container}>
-      <img
-        src="https://p4.wallpaperbetter.com/wallpaper/441/548/891/rick-and-morty-car-rainbow-wallpaper-preview.jpg"
-        alt=""
-      />
-      <label htmlFor="">Nombre: </label>
-      <input
-        type="text"
-        value={userData.userName}
-        name="userName"
-        onChange={handleChange}
-      />
-      {errors.userName ? <p>{errors.userName}</p> : null}
-      <label htmlFor="">Usuario: </label>
-      <input
-        type="password"
-        value={userData.password}
-        name="password"
-        onChange={handleChange}
-      />
-      {errors.password ? <p>{errors.password}</p> : null}
-      <br />
-      <button type="submit">Login</button>
+      <div className={styles.Formul}>
+        <div className={styles.Image}>
+          <img
+            src="https://p4.wallpaperbetter.com/wallpaper/441/548/891/rick-and-morty-car-rainbow-wallpaper-preview.jpg"
+            alt=""
+          />
+        </div>
+        <div className={styles.Inputs}>
+          <label htmlFor="">Nombre: </label>
+          <input
+            type="text"
+            value={userData.userName}
+            name="userName"
+            onChange={handleChange}
+          />
+          {errors.userName ? <p>*{errors.userName}</p> : null}
+          <label htmlFor="">Usuario: </label>
+          <input
+            type="password"
+            value={userData.password}
+            name="password"
+            onChange={handleChange}
+          />
+          {errors.password ? <p>*{errors.password}</p> : null}
+          <br />
+          <button type="submit">Login</button>
+        </div>
+      </div>
     </form>
   );
 }

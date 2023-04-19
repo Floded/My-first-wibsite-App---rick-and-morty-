@@ -1,3 +1,20 @@
-.index {
-    background: red;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  /* margin: auto auto; */
+  /* position: absolute;
+  left: 24%;
+  bottom: 5px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 95vh;
+  
+  /* background-image: url("https://wallpapers.com/images/featured/qs811igzbabl1m0o.jpg"); */
+  background-color: #282c34;
+}
+
