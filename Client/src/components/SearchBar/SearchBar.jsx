@@ -6,20 +6,20 @@ export default function SearchBar({ onSearch }) {
   function handleInutChange(event) {
     setSearch(event.target.value);
   }
+
   return (
     <div className={styles.SearchBar}>
-      {/* <div className={styles.ContainImput}> */}
-        <input
-          // className={styles.Imput}
-          placeholder="Introduce un ID ...."
-          type="search"
-          onChange={handleInutChange}
-          // value={search}
-        />
-        <button className={styles.ButtomAdd} onClick={() => onSearch(search)}>
-          Agregar
-        </button>
-      </div>
-    // </div>
+      <div className={styles.Icon}></div>
+      <input
+        className={styles.Input}
+        placeholder="Introduce un ID ...."
+        type="search"
+        onChange={handleInutChange}
+        // value={search}
+      />
+      <button className={styles.ButtomAdd} onClick={() => onSearch(search)}>
+        Add
+      </button>
+    </div>
   );
 }

@@ -7,15 +7,34 @@
     margin-bottom: 15px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
+   */
+   @import url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap);
+
+  .Container {
+    position: absolute;
+    top: 5px;
+    left: 5%;
+    width: 88vw;
+    height: 28px;
+    background: linear-gradient(to right, #808080, #3fada8);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 7px;
+    font-family: 'Ubuntu', sans-serif;
+  }
+
+  .disable:hover {
+    color: #abfa5e;
+  }
 
   .active{
     text-decoration: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
+    
   }
   
   .disable {
     text-decoration: none;
     color: aliceblue;
   }
-   */

@@ -23,7 +23,25 @@
     margin-left: 10px;
 } */
 
-/* button:hover{
+/* 
+} */
+
+.Input{
+    border-radius: 4px;
+    background: transparent;
+    margin-right: 8px;
+    padding: 1px;
+    color: aliceblue;
+}
+
+button {
+    width: 50px;
+    height: 20px;
+    border-radius: 50px;
+    background: #fff;
+}
+
+button:hover{
     cursor: pointer;
     box-shadow: 4px 2px 9px 1px rgba(65,186,242,0.66);
-} */
+}

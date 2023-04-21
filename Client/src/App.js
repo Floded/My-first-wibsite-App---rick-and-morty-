@@ -71,7 +71,6 @@ function App() {
         <Route path="/detail/:detailId" element={<Detail />} />
         <Route path="/favorites" element={<Favorites />} />
       </Routes>
-      {/* <SearchBar onSearch={onSearch}/> */}
     </div>
   );
 }

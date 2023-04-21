@@ -17,10 +17,10 @@ const NavLinkMe = ({ to, children, ...props }) => {
 
 export default function Nav(props) {
   return (
-    <div className={styles.container}>
+    <div className={styles.Container}>
       <NavLinkMe to="/home">Home</NavLinkMe>
       <NavLinkMe to="/about">About</NavLinkMe>
-      <NavLink to="/favorites">Favorites</NavLink>
+      <NavLinkMe to="/favorites">Favorites</NavLinkMe>
       <SearchBar onSearch={(charaterID) => props.onSearch(charaterID)} />
     </div>
   );

@@ -26,7 +26,7 @@ function Card({
       addFav({ name, species, gender, image, onClose, id });
     }
   };
-  useEffect(() => {
+  useEffect((id) => {
     myFavorites.forEach((fav) => {
       if (fav.id === id) {
         setIsFav(true);
@@ -40,12 +40,12 @@ function Card({
         <img className={styles.Img} src={image} alt="Not found" />
       </div>
       <div className={styles.TextContainer}>
-        <h2>Specie: </h2>
-        <h3> {species} </h3>
         <h2>Name: </h2>
         <Link to={`/detail/${id}`}>
-          <h3> {name} </h3>
+          <h3 className={styles.Detail}> {name} </h3>
         </Link>
+        <h2>Specie: </h2>
+        <h3> {species} </h3>
         <h2>Gender: </h2>
         <h3> {gender} </h3>
       </div>

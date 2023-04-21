@@ -1,8 +1,15 @@
-/* h2 {
-    font-family: cursive;
+.Container {
+    background: #9ad1e296;
+    height: 500px;
+    margin: 50px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 8px;
 }
 
-p {
-    height: 100px;
-    background: cadetblue;
-} */
+img {
+    height: 150px;
+    width: 300px;
+}
