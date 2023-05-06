@@ -10,17 +10,6 @@ function Favorites({ myFavorites }) {
 
   const dispatch = useDispatch();
 
-  // const handleOrder = (event) => {
-  //   setAux(true);
-  //   const { value } = event.target;
-  //   dispatch(orderCards(value));
-  // };
-
-  // const handleFilter = (event) => {
-  //   const { value } = event.target;
-  //   dispatch(filterCards(value))
-  // };
-
   return (
     <div className={styles.Container}>
       <div>

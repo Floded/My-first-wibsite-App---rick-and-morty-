@@ -1,7 +1,7 @@
 .Card{
     display: flex;    
     justify-content: center;
-    width: 350px;
+    width: 450px;
     height: 250px;
     background-image: url("https://images.ecestaticos.com/6iLIx07bmbcAO6V9yaCIyPTWEQ8=/17x5:1715x1279/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F502%2Fa04%2F0d5%2F502a040d58e3739f6f419bba18deefe1.jpg");
     margin: 100px;

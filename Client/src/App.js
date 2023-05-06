@@ -18,16 +18,18 @@ function App() {
   // const password = ""
 
   function onSearch(id) {
-    axios.get(`http://localhost:3001/rickandmorty/character/${id}`).then((res) => {
-      const data = res.data;
-      (
-        data.name
-          ? character.filter((char) => char.id === data.id).length === 0
-          : ""
-      )
-        ? setCharacter([...character, data])
-        : alert("Personaje ya existe");
-    });
+    axios
+      .get(`http://localhost:3001/rickandmorty/character/${id}`)
+      .then((res) => {
+        const data = res.data;
+        (
+          data.name
+            ? character.filter((char) => char.id === data.id).length === 0
+            : ""
+        )
+          ? setCharacter([...character, data])
+          : alert("Personaje ya existe");
+      });
   }
 
   function onClose(id) {
@@ -38,21 +40,21 @@ function App() {
   // const login = (userData) => {
   //   if(userData.userName === userName &&
   //     userData.password === password) {
-  //       setAccess(true);  
+  //       setAccess(true);
   //       navigate("/home");
   //     }
   // };
 
   function login(userData) {
     const { userName, password } = userData;
-    const URL = 'http://localhost:3001/rickandmorty/login/';
+    const URL = "http://localhost:3001/rickandmorty/login/";
     axios(URL + `?email=${userName}&password=${password}`).then(({ data }) => {
-       const { access } = data;
-       setAccess(data);
-       access && navigate('/home');
+      const { access } = data;
+      setAccess(data);
+      access && navigate("/home");
     });
     // console.log(userName, password);
- }
+  }
 
   useEffect(() => {
     !access && navigate("/");
@@ -62,7 +64,7 @@ function App() {
     <div className="App">
       {location.pathname !== "/" && <Nav onSearch={onSearch} />}
       <Routes>
-        <Route path="/" element={<Form login={login}/>} />
+        <Route path="/" element={<Form login={login} />} />
         <Route
           path="/home"
           element={<Cards character={character} onClose={onClose} />}
